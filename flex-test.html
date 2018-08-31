@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Макет сайта</title>
+		<style>
+			body {
+				margin: 0;
+				border: 0;
+				background-color: #ffffff;
+			}
+
+			.layout-positioner {
+				max-width: 1024px;
+				display: flex;
+				flex-wrap: wrap;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.header {
+				width: 100%;
+				min-height: 60px;
+				background-color: #fad900;
+			}
+
+			.header-left {
+				display: flex;
+				justify-content: flex-start;
+				/*flex-basis: 512px; */
+				flex-grow: 1;
+				padding-left: 20px;
+				min-height: 60px;
+				width: 50%;
+				box-sizing: border-box;
+				border: 2px solid lightgrey;
+			}
+
+			.header-right {
+				display: flex;
+				justify-content: flex-end;
+				/*flex-basis: 512px;*/
+				flex-grow: 1;
+				padding-right: 20px;
+				min-height: 60px;
+				width: 50%;
+				box-sizing: border-box;
+				border: 2px solid lightgrey;
+			}
+
+			.screen2 {
+				width: 100%;
+				min-height: 600px;
+				background: #f3f3f3;
+			}
+
+			.screen2-left {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				flex-basis: 512px; 
+				flex-grow: 1;
+				padding-bottom: 20px;
+				min-height: 600px;
+				box-sizing: border-box;
+				border: 2px solid lightgrey;
+			}
+
+			.screen2-left p {
+				width: 70%;
+			}
+
+			.screen2-right {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				flex-basis: 512px; 
+				flex-grow: 1;
+				min-height: 600px;
+				box-sizing: border-box;
+				border: 2px solid lightgrey;
+			}
+
+			.screen2-left h2,
+			.screen2-left p,
+			.screen2-left button {
+				border: 2px solid lightgrey;
+			}
+
+			@media (max-width: 1024px) {
+				body {
+					margin: 0;
+					border: 0;
+					background-color: #ffffff;
+				}
+
+				.header {
+					width: 100%;
+					min-height: 60px;
+					background-color: #fad900;
+				}
+
+				.layout-positioner {
+					max-width: 1024px;
+					display: flex;
+					flex-wrap: wrap;
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				.header-left {
+					display: flex;
+					justify-content: flex-start;
+					flex-basis: 50%; 
+					flex-grow: 1;
+					min-height: 60px;
+					box-sizing: border-box;
+					border: 2px solid lightgrey;
+				}
+
+				.header-right {
+					display: flex;
+					justify-content: flex-end;
+					flex-basis: 50%; 
+					flex-grow: 1;
+					min-height: 60px;
+					box-sizing: border-box;
+					border: 2px solid lightgrey;
+				}
+
+				.screen2 {
+					width: 100%;
+					min-height: 600px;
+					background: #f3f3f3;
+				}
+
+				.screen2-left {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					flex-basis: 512px; 
+					flex-grow: 1;
+					padding-bottom: 20px;
+					min-height: 600px;
+					box-sizing: border-box;
+					border: 2px solid lightgrey;
+				}
+
+				.screen2-left p {
+					width: 70%;
+				}
+
+				.screen2-right {
+					display: flex;
+					justify-content: center;
+					align-items: flex-end;
+					flex-basis: 512px; 
+					flex-grow: 1;
+					order: -1;
+					min-height: 300px;
+					box-sizing: border-box;
+					border: 2px solid lightgrey;
+				}
+
+				.screen2-left h2,
+				.screen2-left p,
+				.screen2-left button {
+					border: 2px solid lightgrey;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="layout-positioner">
+				<div class="header-left">
+					<p>Логотип</p>
+				</div>
+				<div class="header-right">
+					<p>Кнопка</p>
+				</div>
+			</div>
+		</header>
+
+		<section class="screen2">
+			<div class="layout-positioner">
+				<div class="screen2-left">
+					<h2>Выберите свой путь развития</h2>
+					<p>В ПИКЧЕ курсы делятся на несколько направлений:<br>
+					— основы фотографии для новичков;<br>					
+					— про-курс для любителей;<br>
+					— свадебное фото;<br>
+					— обработка фотографий;<br>
+					— видеография;<br>
+					— студийные интенсивы.</p>			
+					<p>Оставьте телефон, и менеджер расскажет подробнее
+					о понравившемся вам курсе.</p>
+					<button>Подробнее</button>
+				</div>
+				<div class="screen2-right">
+					<img src="img/3-screen-2.png" alt="Изображение 2" width="247" height="500">
+				</div>
+			</div>
+		</header>
+	</body>
+</html>

@@ -12,7 +12,7 @@
 			}
 
 			.layout-positioner {
-				max-width: 1024px;
+				max-width: 1200px;
 				display: flex;
 				flex-wrap: wrap;
 				margin-left: auto;
@@ -48,7 +48,13 @@
 			}
 
 			.header-right button,
-			.screen2-left button {
+			.screen2-left button,
+			.screen3-right button,
+			.screen4-left button,
+			.screen5-right button,
+			.screen6-left button,
+			.screen7-right button,
+			.screen8-left button {
 				align-self: center;
 				font-size: 16px;
 				font-family: "Helvetica Neue", "Open Sans", sans-serif;
@@ -64,18 +70,36 @@
 			}
 
 
-			.screen2 {
+			.screen2,
+			.screen3,
+			.screen4,
+			.screen5,
+			.screen6,
+			.screen7,
+			.screen8 {
 				width: 100%;
 				min-height: 600px;
+			}
+
+			.screen2,
+			.screen4,
+			.screen6,
+			.screen8 {
 				background: #f3f3f3;
 			}
 
-			.screen2-left {
+			.screen2-left,
+			.screen3-right,
+			.screen4-left,
+			.screen5-right,
+			.screen6-left,
+			.screen7-right,
+			.screen8-left {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				flex-basis: 512px; 
+				flex-basis: 600px; 
 				flex-grow: 1;
 				padding-bottom: 20px;
 				min-height: 600px;
@@ -83,25 +107,34 @@
 				border: 2px solid lightgrey;
 			}
 
-			.screen2-right {
+			.screen2-right,
+			.screen3-left,
+			.screen4-right,
+			.screen5-left,
+			.screen6-right,
+			.screen7-left,
+			.screen8-right {
 				display: flex;
 				justify-content: center;
 				align-items: flex-end;
-				flex-basis: 512px; 
+				flex-basis: 600px; 
 				flex-grow: 1;
 				min-height: 600px;
 				box-sizing: border-box;
 				border: 2px solid lightgrey;
 			}
 
-			.header p,
-			.screen2-left h2,
-			.screen2-left p,
-			.screen2-left button {
+			.screen7-left {
+				align-items: center;
+			}
+
+			h2,
+			p,
+			button {
 				border: 2px solid lightgrey;
 			}
 
-			.screen2-left p {
+			p {
 				width: 70%;
 				font-family: "Helvetica Neue", "Open Sans", sans-serif;
 				font-weight: 300;
@@ -111,7 +144,7 @@
 				color: gray;
 			}
 
-			.screen2 h2 {
+			h2 {
 				font-family: "Helvetica Neue", "Open Sans", sans-serif;
 				font-weight: 300;
 				line-height: 1.5;
@@ -120,12 +153,36 @@
 				color: gray;
 			}
 
-			.screen2 img {
+			img {
 				animation-name: translate-to-right;
 				animation-duration: 5s;
 			}
 
-			.screen2-left {
+			.screen6-right {
+				height: 300px;
+				width: 400px;
+				align-content: center;
+				background: url("img/7-screen-6.png") no-repeat 50% 100%;
+				background-color: #e7e7e7;
+				box-shadow: 0 0 30px rgba(0,0,0,0.15);
+			}
+
+			.screen8-right {
+				height: 300px;
+				width: 450px;
+				align-content: center;
+				background: url("img/9-screen-8.png") no-repeat 50% 100%;
+				background-color: #e7e7e7;
+				box-shadow: 0 0 30px rgba(0,0,0,0.15);
+			}
+
+			.screen2-left,
+			.screen3-right,
+			.screen4-left,
+			.screen5-right,
+			.screen6-left,
+			.screen7-right,
+			.screen8-left{
 				animation-name: scale;
 				animation-duration: 5s;
 			}
@@ -275,16 +332,19 @@
 				    transform: translate(45px, 2px) rotate(-45deg);
 				}*/
 
-				.screen2-left p {
+				p {
 					width: 90%;
 					font-size: 18px;
 				}
 
-				.screen2-left button {
+				button {
 					font-size: 18px;
 				}
 
-				.screen2-right {
+				.screen2-right,
+				.screen4-right,
+				.screen6-right,
+				.screen8-right {
 					order: -1;
 				}
 
@@ -302,32 +362,170 @@
 				</div>
 				<div class="header-right">
 					<button>Подробнее</button>
-					<div class="menu-icon">
-		                <span></span>
-		            </div>
+		            <span></span>
 				</div>
 			</div>
 		</header>
 
-		<section class="screen2">
-			<div class="layout-positioner">
-				<div class="screen2-left">
-					<h2>Выберите свой путь развития</h2>
-					<p>В ПИКЧЕ курсы делятся на несколько направлений:<br>
-					— основы фотографии для новичков;<br>					
-					— про-курс для любителей;<br>
-					— свадебное фото;<br>
-					— обработка фотографий;<br>
-					— видеография;<br>
-					— студийные интенсивы.</p>			
-					<p>Оставьте телефон, и менеджер расскажет подробнее
-					о понравившемся вам курсе.</p>
-					<button>Подробнее</button>
+		<main>
+			<!-- SCREEN 1 -->
+			<section class="screen1 background">
+				<div class="layout-positioner">
+					<div class="screen1-left wow">
+						<img src="img/2-screen-1.png" alt="Изображение 1" width="314" height="553">
+					</div>
+					<div class="screen1-right wow">
+						<h1>Станьте профессиональным фотографом,<br>
+						пройдя обучение в международной<br>
+						сети фотошкол <span>ПИКЧА</span>
+						</h1>
+						<form name="screen1-form">
+							<input type="text" name="fullname" id="fullname" placeholder="Ваше имя" autocomplete="on" tabindex="0" autofocus><br>
+							<input type="tel" name="phone" id="phone" placeholder="Телефон: +7(___)___-__-__" tabindex="0" required><br>
+							<!-- <input mask="+7(111)111-11-11" class="form_field" placeholder="+7(999)999-99-99" maxlength="16" id="phone" autocomplete="on" size="16" value=""> -->
+							<button class="button" type="submit" name="screen1-right-button" id="screen1-right-button" tabindex="0">Подробнее</button>
+							<div class="agreement">
+								<input type="checkbox" name="agreement" id="agreement" tabindex="0" checked>
+								<label for="agreement" tabindex="0">Отправляя заявку, я даю согласие на обработку персональных данных</label>
+							</div>
+						</form>
+					</div>
 				</div>
-				<div class="screen2-right">
-					<img src="img/3-screen-2.png" alt="Изображение 2" width="247" height="500">
+			</section>
+			<!-- SCREEN 1 -->
+
+			
+			<!-- SCREEN 2 -->
+			<section class="screen2">
+				<div class="layout-positioner">
+					<div class="screen2-left wow">
+						<h2>Выберите свой путь развития</h2>
+						<p>В ПИКЧЕ курсы делятся на несколько направлений:<br>
+						— основы фотографии для новичков;<br>					
+						— про-курс для любителей;<br>
+						— свадебное фото;<br>
+						— обработка фотографий;<br>
+						— видеография;<br>
+						— студийные интенсивы.</p>			
+						<p>Оставьте телефон, и менеджер расскажет подробнее
+						о понравившемся вам курсе.</p>
+						<button>Подробнее</button>
+					</div>
+					<div class="screen2-right wow">
+						<img src="img/3-screen-2.png" alt="Изображение 2" width="247" height="500">
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<!-- SCREEN 2 -->
+
+
+			<!-- SCREEN 3 -->
+			<section class="screen3">
+			 	<div class="layout-positioner">
+					<div class="screen3-left wow">
+						<img src="img/4-screen-3.png" alt="Изображение 3" width="303" height="500">
+					</div>
+					<div class="screen3-right wow">
+						<h2>Вы сами составляете программу обучения</h2>
+						<p>Мы понимаем, что обучение будет максимально полезным, когда процесс ориентирован на интересы и пожелания учеников. У вас будет возможность подобрать удобное расписание и посещать занятия именно в те дни и в то время, когда вы можете.</p>
+						<p>Стать профессионалом в определенной сфере вам поможет специализация. Если вы хотите заниматься только свадебной фотографией, вы будете изучать только её.</p>
+						<p>Оставьте имя и телефон, менеджер поможет составить персональную программу.</p>
+						<button>Подробнее</button>
+					</div> 
+				</div>	
+			</section>
+			<!-- SCREEN 3 -->
+
+
+			<!-- SCREEN 4 -->
+			<section class="screen4">
+			 	<div class="layout-positioner">
+				 	<div class="screen4-left wow">
+						<h2>Теория всегда закрепляется практикой</h2>
+						<p>Только так можно научиться круто фотографировать. Уже на первой встрече вы начнёте делать свои первые снимки в ручном режиме! И все новые знания закрепим серией практических упражнений.</p>
+						<p>Вы прочувствуете на себе, кто такой «профессиональный фотограф». Договоритесь со своей первой моделью, найдёте подходящую локацию и осуществите первую фотосессию.</p>
+						<p>Оставьте имя и телефон, менеджер расскажет подробнее, что будет на практике.</p>
+						<button>Подробнее</button>
+					</div> 
+				 	<div class="screen4-right wow">
+						<img src="img/5-screen-4.png" alt="Изображение 4" width="221" height="500">
+					</div>
+				</div>
+			</section>
+			<!-- SCREEN 4 -->
+
+
+			<!-- SCREEN 5 -->
+			<section class="screen5">
+			 	<div class="layout-positioner">
+					<div class="screen5-left wow">
+						<img src="img/6-screen-5.png" alt="Изображение 5" width="396" height="500">
+					</div>
+					<div class="screen5-right wow">
+						<h2>Окружите себя творческими людьми</h2>
+						<p>Широко известно, что окружение влияет на человека. Поэтому если вы являетесь творческим человеком, вам важно учиться в окружении таких же творческих личностей.</p>
+						<p>В ПИКЧЕ вы найдете тех, кто развивается в том же направлении, что и вы — в фотографии. Здесь вы обретете свою творческую семью. Она станет для вас основой на долгие годы.</p>
+						<p>Оставьте имя и телефон, менеджер познакомит вас с вашей новой группой.</p>
+						<button>Подробнее</button>
+					</div> 	
+				</div>
+			</section>
+			<!-- SCREEN 5 -->
+
+
+			<!-- SCREEN 6 -->
+			<section class="screen6">
+			 	<div class="layout-positioner">
+					<div class="screen6-left wow">
+						<h2>Уроки ведут действующие<br> 
+						фотографы с многолетним опытом</h2>
+						<p>Преподаватели фотошколы ПИКЧА никогда не расстаются со своими камерами. Фотография — это их стиль и образ жизни. Одновременно это и профессия, которая позволяет расти и развиваться. И они с удовольствием делятся своим опытом с учениками!</p>
+						<p>Оставьте имя и телефон, менеджер расскажет больше о вашем преподавателе.</p>
+						<button>Подробнее</button>	
+					</div>
+					<div class="screen6-right wow">
+						<!-- <img src="img/7-screen-6.png" alt="Изображение 6" width="338" height="270"> -->
+					</div> 	
+				</div>
+			</section>
+			<!-- SCREEN 6 -->
+
+
+			<!-- SCREEN 7 -->
+			<section class="screen7">
+			 	<div class="layout-positioner">
+					<div class="screen7-left wow">
+						<img src="img/8-screen-7.png" alt="Изображение 7" width="421" height="300">
+					</div>
+					<div class="screen7-right wow">
+						<h2>После завершения курса</h2>
+						<p>Полностью завершив обучение, вы повысите свои навыки в фотографии. У вас наберется большое портфолио с яркими работами и вы точно будете знать, как сделать фотографию своей профессией.</p>
+						<p>Фоторынок России только набирает обороты и многие направления еще не заняты сильными профессионалами. У вас есть возможность попасть в историю!</p>
+						<p>Оставьте телефон, менеджер опишет все возможности, которые откроются вам.</p>
+						<button>Подробнее</button>
+					</div> 	
+				</div>
+			</section>
+			<!-- SCREEN 7 -->
+
+
+			<!-- SCREEN 8 -->
+			<section class="screen8">
+			 	<div class="layout-positioner">
+					<div class="screen8-left wow">
+						<h2>Первое в России<br> 
+						реалити-шоу по фотографии</h2>
+						<p>ПИКЧА стала первой фотошколой в стране, кто запустил собственное реалити-шоу по фотографии.</p>
+						<p>Мы отобрали 15 участников и обучили их искусству фотографии в прямом эфире всего за 3 месяца.</p>
+						<p>Оставьте телефон, менеджер подскажет дату и время первого пробного урока.</p>
+						<button>Подробнее</button>
+					</div>
+					<div class="screen8-right wow">
+						<!-- <img src="img/7-screen-6.png" alt="Изображение 6" width="338" height="270"> -->
+					</div> 	
+				</div>
+			</section>
+			<!-- SCREEN 8 -->
+		</main>
 	</body>
 </html>

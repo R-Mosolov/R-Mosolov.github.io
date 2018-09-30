@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no>
 		<title>Макет сайта</title>
 		<script src="js/wow.min.js"></script>
 		<script>new WOW().init();</script>
@@ -30,12 +30,12 @@
 			.header-left {
 				display: flex;
 				justify-content: flex-start;
-				flex-grow: 1;
+				flex-grow: 0;
 				padding-left: 20px;
 				min-height: 60px;
 				width: 50%;
 				box-sizing: border-box;
-				border: 2px solid lightgrey;
+				/*border: 2px solid lightgrey;*/
 			}
 
 			.header-right {
@@ -46,7 +46,67 @@
 				min-height: 60px;
 				width: 50%;
 				box-sizing: border-box;
-				border: 2px solid lightgrey;
+				/*border: 2px solid lightgrey;*/
+			}
+
+			h1 {
+				margin-top: 45px;
+				font-family: "Helvetica Neue", "Open Sans", sans-serif;
+				font-weight: 300;
+				line-height: 1.5;
+				font-size: 24px;
+				text-align: center;
+				color: gray;
+			}
+
+			span {
+				font-weight: bold;
+				color: #fad900;
+			}
+
+			#fullname,
+			#phone {
+				width: 380px;
+				padding: 12px ;
+				margin-left: 23%;
+				font-family: "Helvetica Neue", "Open Sans", sans-serif;
+				font-weight: 300;
+				font-size: 16px;
+				color: gray;
+				box-sizing: border-box;
+				border: 0.5px solid lightgray;
+				border-radius: 10px;
+			}
+
+			#phone {
+				margin-top: 18px;
+			}
+
+			#agreement {
+				position: relative;
+				top: -3px; 
+				margin-top: 18px;
+				font-family: "Helvetica Neue", "Open Sans", sans-serif;
+				font-weight: 300;
+				color: gray;
+			}
+
+			#screen1-right-button {
+				border: 0.5px solid #51b02b;
+				border-radius: 10px;
+				font-size: 16px;
+				font-family: "Helvetica Neue", "Open Sans", sans-serif;
+				font-weight: 300;
+				padding: 12px;
+				background-color: #51b02b;
+				color: white;
+				cursor: pointer;
+				margin-top: 18px;
+				margin-left: 23%;
+				box-shadow: 
+					8px 8px 0 -5px rgba(255, 215, 0, 0.9),
+					-8px -8px 0 -5px rgba(135, 206, 250, 0.9);
+				width: 380px;
 			}
 
 			.header-right button,
@@ -71,7 +131,7 @@
 				padding-left: 50px;
 			}
 
-
+			.screen1,
 			.screen2,
 			.screen3,
 			.screen4,
@@ -90,6 +150,7 @@
 				background: #f3f3f3;
 			}
 
+			.screen1-right,
 			.screen2-left,
 			.screen3-right,
 			.screen4-left,
@@ -106,9 +167,10 @@
 				padding-bottom: 20px;
 				min-height: 600px;
 				box-sizing: border-box;
-				border: 2px solid lightgrey;
+				/*border: 2px solid lightgrey;*/
 			}
 
+			.screen1-left,
 			.screen2-right,
 			.screen3-left,
 			.screen4-right,
@@ -123,7 +185,7 @@
 				flex-grow: 1;
 				min-height: 600px;
 				box-sizing: border-box;
-				border: 2px solid lightgrey;
+				/*border: 2px solid lightgrey;*/
 			}
 
 			.screen7-left {
@@ -133,9 +195,10 @@
 			h2,
 			p,
 			button {
-				border: 2px solid lightgrey;
+				/*border: 2px solid lightgrey;*/
 			}
 
+			label,
 			p {
 				width: 70%;
 				font-family: "Helvetica Neue", "Open Sans", sans-serif;
@@ -155,7 +218,7 @@
 				color: gray;
 			}
 
-			img {
+			img:not(.img-header-left) {
 				animation-name: translate-to-right;
 				animation-duration: 5s;
 			}
@@ -204,143 +267,98 @@
 					visibility: hidden;
 				}
 				.header-left {
+					width: 100%;
 					height: 40px;
 				}
-				/*.header-right {
-					width: 80px;
-					height: 50px;
-					background: white;
-				}*/
 
-				/*.header-right {
-					display: flex;
-					justify-content: flex-end;
-					align-self: center;
-				}*/
+				.header-right {
+					display: none;
+				}
 
 				.header-right button {
 					display: none;
 				}
 
-				/*.header-right span {
-					visibility: visible;
-					display: flex;
-					justify-content: flex-end;
-					align-self: center;
-					margin-top: 22.5px;
-					width: 50px;
-					height: 10px;
-					background: white;
-					border-radius: 10px;
-				}*/
-
-				.header-right span::before {
-					display: block;
-					content: "";
-					margin-top: 12.5px;
-					width: 50px;
-					height: 10px;
-					background: white;
-					border-radius: 10px;
-					box-shadow: 2px 3px 5px -4px grey;
+				h1 {
+					order: -1;
+					margin-top: 15px;
+					font-size: 18px;
 				}
 
-				.header-right span::after {
-					display: block;
-					content: "";
-					margin-top: 10px;
-					width: 50px;
-					height: 10px;
-					background: white;
-					border-radius: 10px;
-					box-shadow: 2px 3px 5px -4px grey;
+				h2 {
+					width: 90%;
+					line-height: 1.3;
 				}
-
-				.header-right span:hover::before,
-				.header-right span:hover::after {
-					box-shadow: 2px 3px 5px -4px black;
-					/*transform: rotate(45deg);*/
-					transition-duration: 0.5s;
-				}
-
-				.header-right span:hover::before {
-					transform: rotate(45deg) translate(0, 14px);
-				}
-
-				.header-right span:hover::after {
-					transform: rotate(-45deg) translate(0, -14px);
-				}
-
-				.header-right span:active::before {
-					transform: rotate(45deg);
-					transition-duration: 3s;
-				}
-
-				.header-right span:active::after {
-					transform: rotate(-45deg);
-					transition-duration: 3s;
-				}
-
-				/*.header-right button::after {
-					display: block;
-					width: 100px;
-					height: 50px;
-					background: white;
-					z-index: 100;
-				}*/
-
-				/*.menu-icon span {
-				    display: block;
-				    width: 50px;
-				    height: 12px;
-				    background-color: #40d47e;
-				    transition-duration: 0.7s;
-				    transition-timing-function: ease-in-out;
-				}
-
-				.menu-icon span::before,
-				.menu-icon span::after {
-				    content: "";
-				    display: block;
-				    width: 100%;
-				    height: 12px;
-				    background-color: #40d47e;
-				    transition-duration: 0.7s;
-				    transition-timing-function: ease-in-out;
-				}
-
-				.menu-icon span::before {
-				    transform: translate(0, -24px);
-				}
-
-				.menu-icon span::after {
-				    transform: translate(0, 12px);
-				}
-
-				.menu-icon-open span {
-				    transform: rotate(180deg);
-				}
-
-				.menu-icon-open span::before,
-				.menu-icon-open span::after {
-				    width: 60%;
-				}
-
-				.menu-icon-open span::before {
-				    transform: translate(45px, -14px) rotate(45deg);
-				}
-
-				.menu-icon-open span::after {
-				    transform: translate(45px, 2px) rotate(-45deg);
-				}*/
 
 				p {
+					margin: 5px 0 5px 0;
 					width: 90%;
 					font-size: 18px;
 				}
 
-				button {
+				#screen1-right-button {
+					margin-left: 5%;
+					margin-right: 5%;
+					width: 90%
+				}
+
+				button:not(.button-screen1-right) {
+					margin-top: 15px;
 					font-size: 18px;
+				}
+
+				#fullname,
+				#phone {
+					width: 90%;
+					margin-left: 5%;
+					margin-right: 5%;
+				}
+
+				#phone {
+					margin-top: 18px;
+				}
+
+				#agreement {
+					position: relative;
+					top: -3px; 
+					margin-top: 18px;
+					font-family: "Helvetica Neue", "Open Sans", sans-serif;
+					font-weight: 300;
+					color: gray;
+				}
+
+				input[type="checkbox"] label {
+					width: 90%;
+					margin-left: 5%;
+					margin-right: 5%;
+				}
+
+				.screen1-right {
+					/*order: -1;*/
+					min-height: auto;
+				}
+
+				.screen1-left {
+					min-height: auto;
+					margin-top: 10px;
+					margin-left: 10%;
+					margin-right: 10%;
+				}
+
+				/*.screen1-left img {
+					margin-left: 10%;
+					margin-right: 10%;
+				}*/
+
+				.screen2,
+				.screen3,
+				.screen4,
+				.screen5,
+				.screen6,
+				.screen7,
+				.screen8 {
+					width: 100%;
+					height: auto;
 				}
 
 				.screen2-right,
@@ -348,9 +366,25 @@
 				.screen6-right,
 				.screen8-right {
 					order: -1;
+					height: auto;
 				}
 
-				
+				.screen2-right,
+				.screen3-left,
+				.screen4-right,
+				.screen5-left,
+				.screen6-right,
+				.screen7-left,
+				.screen8-right {
+					max-width: 100%;
+					height: auto;
+				}
+
+				img:not(.img-header-left) {
+					height: auto;
+					max-width: 90%;
+					filter: drop-shadow(0 3px 3px lightgrey);
+				}
 			}
 		</style>
 	</head>
@@ -359,8 +393,7 @@
 		<header class="header">
 			<div class="layout-positioner">
 				<div class="header-left">
-					<p>Логотип</p>
-					<p>Международная сеть: <br>32 филиала по РФ и СНГ</p>
+					<img class="img-header-left" src="img/1-logo(2).png" alt="Логотип ПИКЧИ" width="306" height="50">
 				</div>
 				<div class="header-right">
 					<button>Подробнее</button>
@@ -385,7 +418,7 @@
 							<input type="text" name="fullname" id="fullname" placeholder="Ваше имя" autocomplete="on" tabindex="0" autofocus><br>
 							<input type="tel" name="phone" id="phone" placeholder="Телефон: +7(___)___-__-__" tabindex="0" required><br>
 							<!-- <input mask="+7(111)111-11-11" class="form_field" placeholder="+7(999)999-99-99" maxlength="16" id="phone" autocomplete="on" size="16" value=""> -->
-							<button class="button" type="submit" name="screen1-right-button" id="screen1-right-button" tabindex="0">Подробнее</button>
+							<button class="button button-screen1-right" type="submit" name="screen1-right-button" id="screen1-right-button" tabindex="0">Подробнее</button>
 							<div class="agreement">
 								<input type="checkbox" name="agreement" id="agreement" tabindex="0" checked>
 								<label for="agreement" tabindex="0">Отправляя заявку, я даю согласие на обработку персональных данных</label>
